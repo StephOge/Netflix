@@ -53,12 +53,76 @@ div .backgroundimage div.intro {
 }
 div .intro h1 {
     font-size: 3.125rem;
+    font-weight: bold;
 }
 div.intro h2 {
     font-size: 1.625rem;
     margin-top: 13px;
     margin-bottom: 29px;
+    font-weight: normal;
 }
 div.intro h3 {
     font-size: 1.2rem;
+    font-weight: normal;
+}
+div.intro form {
+    position: relative;
+    display: grid;
+    margin-top: 20px;
+    grid-template-columns: 1fr max-content;
+}
+form.mail input {
+    padding: 15px;
+    font-size: 1.2rem;
+    width: 100%;
+}
+div.backgroundimage input ~ span {
+    position: absolute;
+    left: 12px;
+    top: 14px;
+    z-index: 5;
+    color: #aaa;
+    transition: all 0.10s ease;
+    pointer-events: none;
+}
+div.backgroundimage input:focus {
+    padding-top: 19px;
+    padding-bottom: 6px;
+}
+div.backgroundimage input:focus ~ span {
+    top: 2px;
+    font-size: .8rem;
+}
+form.mail button {
+    font-size: 1.625rem;
+    padding: 12px 25px;
+    background-color: red;
+    color: #fff;
+    border: 0;
+}
+
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 46px;
+    padding: 70px 35px;
+}
+section div.text h1{
+    font-size: 3.125rem;
+}
+section div.text p{
+    font-size: 1.625rem;
+}
+div.media {
+    position: relative;
+}
+div.media .img1 img {
+    width: 400px;
+}
+div.media .img1 video {
+    width: 293px;
+    position: absolute;
+    top: 62px;
+    left: 53px;
 }
