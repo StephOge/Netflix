@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+img {
+    max-width: 100%;
+}
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
@@ -107,9 +110,15 @@ section{
     grid-template-columns: 1fr 1fr;
     gap: 46px;
     padding: 70px 35px;
+    align-items: center;
+    border-top: 8px solid #222;
+}
+section.fourth {
+    border-bottom: 8px solid #222;
 }
 section div.text h1{
     font-size: 3.125rem;
+    margin-bottom: 8px;
 }
 section div.text p{
     font-size: 1.625rem;
@@ -117,12 +126,160 @@ section div.text p{
 div.media {
     position: relative;
 }
-div.media .img1 img {
+div.media  img {
     width: 400px;
 }
-div.media .img1 video {
+div.media video {
     width: 293px;
     position: absolute;
     top: 62px;
     left: 53px;
+}
+section:nth-child(even) div.text {
+    order: 2;
+}
+
+/*section div.download {
+    border: 2px solid #666;
+    border-radius: 15px;
+    padding: 10px;
+    height: 95px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+   margin-top: 50px;
+   left: 75px;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    background-color: black;
+}
+section div.download img{
+    height: 75px;
+    width: auto;
+}
+
+div.FAQ {
+    padding: 70px 30px;
+}
+div.FAQ h1 {
+    font-size: 3.125rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+div.questions {
+    max-width: 635px;
+    margin: 0 auto;
+    font-size: 1.625rem;
+}
+div.question {
+    position: relative;
+    background-color: #303030;
+}
+div.question svg {
+    width: 30px;
+    height: 30px;
+    right: 30px;
+    top: 20px;
+    position: absolute;
+    transform: rotate(45deg);
+    transition: all 0.2s ease;
+}
+div.question .head {
+    display: block;
+    padding: 20px 30px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+div.question div.answer {
+    padding: 0 30px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+div.question input[type="checkbox"] {
+    display: none;
+}
+div.question input[type="checkbox"]:checked + div.answer {
+    padding: 30px 30px;
+    max-height: 600px;
+}
+/* div.question input{type="checkbox"} */
+section.lastsection {
+    text-align: center;
+}
+.faq h1 {
+    padding-bottom: 40px;
+    font-size: 3rem;
+}
+.questions {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 40%;
+    align-items: center;
+    
+} 
+.questions li {
+    padding: 20px 30px;
+    margin: 5px;
+    font-size: 1.6rem;
+    background-color: #303030;
+    color: #fff;
+    text-align: left;
+    width: 50%;
+    list-style-type: none;
+}
+.faq p {
+    padding-top: 60px;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+.input {
+    display: inline-grid;
+    align-items: center;
+    grid-template-columns: 50% 40%;
+}
+.input input {
+    width: 600px;
+    height: 3rem;
+}
+.input button {
+    height: 3.25rem;
+    width: 320px;
+    left: 20px;
+    text-align: center;
+    background-color: red;
+    font-size: 1.5rem;
+    padding: 15px 32px;
+    border: none;
+    border-radius: 2px;
+    color: white;
+}
+.footer {
+    max-width: 70%;
+    margin: 1rem auto;
+    overflow: auto;
+}
+.footer .footer a {
+    color: #999;
+    font-size: 0.9rem;
+
+}
+.footer p {
+    margin-bottom: 1.5rem;
+}
+.footer .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-gap: 2rem;
+}
+.footer li {
+    line-height: 2.4;
+    list-style-type: none;
+}
+.footer .footer-cols a {
+    font-size: 0.9rem;
+    color: #999;
+    text-decoration: none;
 }
